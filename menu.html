@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+			crossorigin="anonymous"
+		/>
+
+		<title>Menu</title>
+		<style>
+			
+			body {
+				height: 450px;
+				width: 350px;
+				margin: 0;
+				padding: 0;
+				background: linear-gradient(-30deg, #e73c7e, #23a6d5, #23d5ab);
+				border: 5px solid #fff;
+			}
+			
+			h1{
+				text-align: center;
+			}
+			.h1.sam{
+				text-align: center;
+			}
+			
+			.head{
+				color: black;
+				text-align: center;
+			}
+			
+			.menu {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 220px;
+				height: 220px;
+				filter: url("#goo");
+			}
+			.menu .item {
+				position: absolute;
+				top: 80px;
+				left: 80px;
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				color: #fff;
+				background: #ff0b59;
+				
+				text-align: center;
+				border-radius: 50%;
+				transition: transform 600ms ease-out;
+				cursor: pointer;
+			}
+			.item.open-menu {
+				z-index: 1;
+				transition: transform 300ms ease-out;
+				transition-delay: 300ms;
+			}
+			.opened .item:nth-child(2) {
+				transform: translateX(80px);
+			}
+			.opened .item:nth-child(3) {
+				transform: translateX(40px) translateY(70px);
+			}
+			.opened .item:nth-child(4) {
+				transform: translateX(-40px) translateY(70px);
+			}
+			.opened .item:nth-child(5) {
+				transform: translateX(-80px);
+			}
+			.opened .item:nth-child(6) {
+				transform: translateX(-40px) translateY(-70px);
+			}
+			.opened .item:nth-child(7) {
+				transform: translateX(40px) translateY(-70px);
+			}
+
+			.opened .item.open-menu {
+				transform: scale(0);
+			}
+			.item:nth-child(2) {
+				transition-delay: 0;
+			}
+			.item:nth-child(3) {
+				transition-delay: 50ms;
+			}
+			.item:nth-child(4) {
+				transition-delay: 100ms;
+			}
+			.item:nth-child(5) {
+				transition-delay: 150ms;
+			}
+			.item:nth-child(6) {
+				transition-delay: 200ms;
+			}
+			.item:nth-child(7) {
+				transition-delay: 250ms;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>𝓞𝓷-𝓒𝓵𝓲𝓬𝓴 𝓜𝓮𝓷𝓾</h1>
+		<h1 class="sam">𝐁𝐮𝐫𝐬𝐭 𝐌𝐞</h1>
+		
+		<div class="menu">
+			<div class="item open-menu">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</div>
+			<div class="item">
+				<a href="https://www.youtube.com/" target="_blank"
+					><i class="fa fa-youtube" aria-hidden="true"></i
+				></a>
+			</div>
+			<div class="item">
+				<a href="https://www.instagram.com/" target="_blank"
+					><i class="fa fa-instagram" aria-hidden="true"></i
+				></a>
+			</div>
+			<div class="item">
+				<a href="https://www.linkedin.com/" target="_blank"
+					><i class="fa fa-linkedin" aria-hidden="true"></i
+				></a>
+			</div>
+			<div class="item">
+				<a href="https://www.facebook.com/" target="_blank"
+					><i class="fa fa-facebook" aria-hidden="true"></i
+				></a>
+			</div>
+			<div class="item">
+				<a href="https://twitter.com/" target="_blank"
+					><i class="fa fa-twitter" aria-hidden="true"></i
+				></a>
+			</div>
+			<div class="item">
+				<a href="https://www.whatsapp.com/" target="_blank"
+					><i class="fa fa-whatsapp" aria-hidden="true"></i
+				></a>
+			</div>
+			<div class="item close-menu">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</div>
+		</div>
+		<svg>
+			<defs>
+				<filter id='goo'>
+					<feGaussianBlur in='SourceGraphic' stdDeviation='8' result='blur' />
+					<feColorMatrix in='blur' mode='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7' result='goo' />
+					<feBlend in='SourceGraphic' in2='goo' />
+				</filter>
+			</defs>
+		</svg>
+	</body>
+	<script src="index.js"></script>
+	
+</html>
